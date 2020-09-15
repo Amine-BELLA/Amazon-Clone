@@ -1,12 +1,12 @@
 import React from 'react'
 import './Home.css';
 import Image from '../../images/landing-page.png';
-import Carousel from '../Carousel/Carousel';
+import CarouselSlider from '../Carousel/Carousel';
 
 function Home() {
     return (
         <div>
-            <Carousel />
+            <CarouselSlider />
         </div>
     )
 }
