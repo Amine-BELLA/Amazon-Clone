@@ -3,7 +3,6 @@ import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {

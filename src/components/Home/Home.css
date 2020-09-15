@@ -1,3 +1,18 @@
 .home-image {
     width: 100%;
+    z-index: -1;
+    margin-bottom: -5rem;
+}
+
+.home-row {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.tv-image {
+    max-height: 400px;
+    object-fit: contain;
 }
