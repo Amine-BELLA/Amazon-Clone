@@ -4,8 +4,10 @@ import Logo from '../../images/logo-amazon.png';
 import { Link } from 'react-router-dom';
 import SearchIcon from '@material-ui/icons/Search';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
+import { connect } from 'react-redux';
 
-function Header() {
+
+function Header(props) {
     return (
         <nav className='header'>
 
@@ -35,11 +37,17 @@ function Header() {
             <div className='basket'>
                 <Link className='basket-link' to='/checkout'>
                     <ShoppingBasketIcon className='basket-icon' />
-                    <span className='number-items'>0</span>
+                    <span className='number-items'>{props.basket.length}</span>
                 </Link>
             </div>
         </nav>
     )
 }
 
-export default Header;
+function mapStateToProps(state) {
+    return {
+        basket: state.basket
+    }
+}
+
+export default connect(mapStateToProps)(Header);
